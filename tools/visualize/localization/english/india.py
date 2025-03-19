@@ -1,0 +1,20 @@
+field_file_path="File path"
+field_char="Character"
+field_char_codepoint="Character Codepoint"
+field_frequency="Frequency"
+field_total_chars_count="Total Chars Count"
+field_unique_chars_count="Unique Chars Count"
+
+enter_preferred_localization_label="Preferred localization:"
+enter_preferred_sort_label="Sort by:"
+enter_folder_path_label="Enter the folder path:"
+select_file_label="Select file:"
+enter_chunk_size_label="Chunk size:"
+
+processing_folder_label="Processing folder: `%s`"
+
+char_statistics_dashboard_title="Character Statistics Dashboard"
+char_statistics_overall_data_table_title="Folder Statistics Table"
+char_statistics_file_data_table_title="File Statistics Table"
+char_statistics_char_data_table_title="Char Statistics Table"
+char_statistics_char_file_data_table_title="Char-File Statistics Table"

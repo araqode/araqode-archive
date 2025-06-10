@@ -1,7 +1,7 @@
 import os
-from scripts.constants import LOCAL_DATA_DIR
-from scripts.utils import load_env, get_dataverse_api, ensure_local_dir
-from scripts.api import download_file as api_download_file
+from .constants import LOCAL_DATA_DIR
+from .utils import load_env, get_dataverse_api, ensure_local_dir
+from .api import download_file as api_download_file
 
 # --- Main Execution ---
 def main():

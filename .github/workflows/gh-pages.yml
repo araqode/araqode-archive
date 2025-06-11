@@ -21,6 +21,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Setup environemnt
+        env:
+          ENV_FILE: ${{ secrets.ALL_ENV }}
+        run: |
+          echo $ENV_FILE | base64 --decode > .env
+
       - name: Download dataset
         run: python -m src.scripts.clone
 

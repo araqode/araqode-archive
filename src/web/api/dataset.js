@@ -1,7 +1,11 @@
 // API helpers for dataset browsing
 
 export function fetchList(path = "") {
-  return fetch(`/api/list?path=${encodeURIComponent(path)}`)
+  if (!path) {
+    return fetch(`/api/list/root.json`).then(r => r.json());
+  }
+  const url = `/api/list/${path}.json`;
+  return fetch(url)
     .then(r => r.json());
 }
 

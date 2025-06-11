@@ -1,6 +1,7 @@
 import { h } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
-import { fetchTree, fetchList } from '../api/dataset.js';
+import { useContext, useEffect, useState } from 'preact/hooks';
+import UrlPrefixContext from '../context/url-prefix.jsx';
+import { fetchTree, fetchList } from '../api/dataset.jsx';
 
 function FolderTree({ node, onSelect, currentPath }) {
   if (!node || !Array.isArray(node.children)) return null; 
@@ -22,6 +23,7 @@ function FolderTree({ node, onSelect, currentPath }) {
 }
 
 export default function FileBrowser() {
+  const urlPrefix = useContext(UrlPrefixContext);
   const [items, setItems] = useState([]);
   const [path, setPath] = useState("");
   const [fileUrl, setFileUrl] = useState(null);
@@ -29,17 +31,17 @@ export default function FileBrowser() {
   const [tree, setTree] = useState(null);
 
   useEffect(() => {
-    fetchList(path).then(data => setItems(data.items));
+    fetchList(urlPrefix, path).then(data => setItems(data.items));
   }, [path]);
 
   useEffect(() => {
-    fetchTree().then(setTree);
+    fetchTree(urlPrefix).then(setTree);
   }, []);
 
   function open(item) {
     if (item.is_dir) setPath(item.path);
     else {
-      setFileUrl(`/dataset/${item.path}`);
+      setFileUrl(`${urlPrefix}/dataset/${item.path}`);
       setIsImage(/\.(png|jpg|jpeg|gif|bmp|webp)$/i.test(item.name));
     }
   }

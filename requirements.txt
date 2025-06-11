@@ -1,3 +1,5 @@
 pyDataverse
 python-dotenv
 requests
+fastapi
+uvicorn

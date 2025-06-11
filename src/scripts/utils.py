@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pyDataverse.api import NativeApi
-from scripts.constants import ENV_VARS
+from .constants import ENV_VARS
 
 def load_env():
     load_dotenv()

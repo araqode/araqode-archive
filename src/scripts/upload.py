@@ -1,8 +1,8 @@
 import os
 from pyDataverse.models import Datafile
-from scripts.api import delete_file
-from scripts.constants import LOCAL_DATA_DIR
-from scripts.utils import load_env, get_dataverse_api, ensure_local_dir
+from .api import delete_file
+from .constants import LOCAL_DATA_DIR
+from .utils import load_env, get_dataverse_api, ensure_local_dir
 
 # --- Main Execution ---
 def main():

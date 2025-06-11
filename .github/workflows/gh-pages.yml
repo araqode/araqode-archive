@@ -25,7 +25,7 @@ jobs:
         env:
           ENV_FILE: ${{ secrets.ALL_ENV }}
         run: |
-          echo $ENV_FILE | base64 --decode > .env
+          echo $ENV_FILE > .env
 
       - name: Download dataset
         run: python -m src.scripts.clone

@@ -1,6 +1,6 @@
 FROM alpine:latest
-COPY . /codebase
-VOLUME /codebase
+COPY ./dataset /araqode-archive
+VOLUME /araqode-archive
 
 # Set a default command that does nothing but exits successfully.
 # This ensures the container doesn't try to run an application when started,

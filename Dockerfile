@@ -1,4 +1,8 @@
-FROM alpine:latest
+# araqode-archive
+# A curated, multi-modal dataset
+
+FROM scratch
+
 COPY ./dataset /araqode-archive
 VOLUME /araqode-archive
 

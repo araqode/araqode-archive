@@ -1,9 +1,7 @@
 dataset/
 .env
 
-dist/
-node_modules/
-package-lock.json
+tmp/
 
 __pycache__
-.pyenv
+.pyenv/

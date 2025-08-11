@@ -40,7 +40,7 @@ jobs:
 
       - name: Download dataset
         run: |
-          python -m src.scripts.clone
+          python -m scripts.clone
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
